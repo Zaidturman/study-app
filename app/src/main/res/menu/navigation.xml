@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/profile"
+         android:title="Profile"
+
+
+        >
+    </item>
+
+
+    <item android:id="@+id/menu"
+        android:title="menu"
+
+        >
+        <menu>
+            <item android:id="@+id/dashbord"
+                android:title="dashbord"
+                android:icon="@drawable/baseline_dashboard_24"
+
+
+                >
+            </item>
+            <item android:id="@+id/calender"
+                android:title="calender"
+                android:icon="@drawable/baseline_calendar_today_24"
+
+
+                >
+            </item>
+            <item android:id="@+id/Tasks"
+                android:title="Tasks"
+                android:icon="@drawable/baseline_task_alt_24"
+
+
+                >
+            </item>
+            <item android:id="@+id/exams"
+                android:title="exams"
+                android:icon="@drawable/baseline_menu_book_24"
+
+
+                >
+            </item>
+            <item android:id="@+id/leacher"
+                android:title="Leacher"
+                android:icon="@drawable/baseline_business_center_24"
+
+
+                >
+            </item>
+            <item android:id="@+id/setting"
+                android:title="setting"
+                android:icon="@drawable/baseline_settings_24"
+
+
+                >
+            </item>
+        </menu>
+    </item>
+
+
+</menu>

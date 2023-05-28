@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="403dp"
+        android:layout_height="416dp"
+        android:layout_marginTop="64dp"
+        android:padding="2dp"
+        android:text="تم تطوير تطبيق تنظيم المواعيد لتلبية احتياجات الأفراد الذين يسعون لتنظيم حياتهم اليومية والمهام والأحداث المهمة. يهدف التطبيق إلى توفير وسيلة سهلة وفعالة لتنظيم المواعيد والمهام المتنوعة مثل المهام اليومية، والامتحانات، والمحاضرات، والمواعيد الشخصية والمهنية الأخرى.
+
+توفر واجهة المستخدم البديهية والمرنة للتطبيق إمكانية إدارة المهام والأحداث بشكل فعال وسلس. يمكن للمستخدمين إنشاء قائمة المهام اليومية أو الأسبوعية وتعيين المهام الهامة وتحديد الأهداف الزمنية لكل مهمة. يمكن أيضًا تعيين تنبيهات وإشعارات للتذكير بالمهام المهمة والأحداث القادمة.
+
+باستخدام التقويم المدمج في التطبيق، يمكن للمستخدمين تخصيص المواعيد والأحداث وتنظيمها بسهولة. يمكن تعيين توقيت وتاريخ لكل مهمة أو حدث، ويمكن عرضها في تنسيق سهل القراءة مع توفير رؤية شاملة للأجندة الشخصية.
+
+يتميز التطبيق أيضًا بميزة مشاركة المهام والأحداث مع الآخرين. يمكن للمستخدمين دعوة الأصدقاء أو الزملاء للمشاركة في المهام المشتركة وتعيين المواعيد المشتركة. بذلك، يصبح من السهل تنظيم الاجتماعات والفعاليات الجماعية.
+
+بفضل تطبيقنا، يمكن للمستخدمين تحقيق العديد من الفوائد مثل تحسين إنتاجيتهم وتنظيم وقتهم بشكل أفضل، والحفاظ على المهام والأحداث الهامة في مكان واحد، وتقليل التوتر والنسيان بفضل التذكيرات الموثوقة. بفضل تطبيقنا، ستتمكن من إدارة حياتك بطريقة منظمة وفعالة.
+
+استمتع بتجربة تنظيم المواعيد المبتكرة مع تطبيقنا واستعد لإدارة حياتك بطريقة سهلة ومنظم"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="26dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="113dp"
+        android:layout_height="131dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.903"
+        app:srcCompat="@drawable/colorslogowhithout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

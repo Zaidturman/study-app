@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Study Mate</string>
+
+    <string-array name="gender_options">
+        <item>Choose Type</item>
+
+        <item>Task</item>
+        <item>Exam</item>
+        <item>Leacure</item>
+
+    </string-array>
+</resources>
+

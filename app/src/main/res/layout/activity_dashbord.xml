@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+
+                >
+
+                <ImageView
+                    android:id="@+id/viewmenu"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/baseline_menu_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:textColor="@color/purple_700"
+
+                    android:text="Dashbord" />
+
+                <ImageView
+                    android:layout_width="103dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="15dp"
+                    android:id="@+id/aboutus"
+
+
+                    android:src="@drawable/colorslogowhithout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Hello UserName"
+                    android:textSize="20dp"
+                    android:id="@+id/welcome"
+                    android:textColor="@color/black"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Manage your daily tasks to save time"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:id="@+id/button4"
+                    android:text="My Task"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="In Progress"
+                    android:textSize="12dp"
+                    android:id="@+id/progress"
+
+
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Done"
+
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today"
+                    android:textSize="24dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="24dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/todaydate"
+                    android:textColor="@color/black"
+                    />
+                </LinearLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    >
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        tools:layout_editor_absoluteX="1dp"
+                        tools:layout_editor_absoluteY="1dp"
+                        android:id="@+id/tasklist1"
+                        tools:listitem="@layout/todaytask"
+
+
+                        />
+
+
+
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Add New Task" />
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation"
+        app:headerLayout="@layout/nav_header"
+
+        />
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
