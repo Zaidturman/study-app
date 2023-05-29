@@ -30,5 +30,12 @@ class Taskitem_Activity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.task_item)
 
+        val card = findViewById<CardView>(R.id.card1)
+
+        card.setOnClickListener {
+            val intent = Intent(this, card_details::class.java)
+            startActivity(intent)
+        }
+
     }
 }

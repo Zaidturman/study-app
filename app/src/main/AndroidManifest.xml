@@ -30,6 +30,7 @@
         <activity android:name=".Progress"/>
         <activity android:name=".AboutUs"/>
         <activity android:name=".Taskitem_Activity"/>
+        <activity android:name=".card_details"/>
     </application>
     <meta-data
         android:name="com.google.android.gms.version"
