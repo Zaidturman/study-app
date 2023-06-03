@@ -18,14 +18,13 @@ class nav_header : AppCompatActivity() {
         setContentView(R.layout.nav_header)
 
         val header_username =findViewById<TextView>(R.id.header_username)
-        val header_email =findViewById<TextView>(R.id.header_email)
 
 
         val intent=intent
 
         val name = intent.getStringExtra("name").toString()
 
-        header_username.text = "name"
+        header_username.text = name
 
 
 

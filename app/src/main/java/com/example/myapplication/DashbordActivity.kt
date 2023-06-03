@@ -3,11 +3,15 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.database.*
 import java.util.*
 
@@ -26,18 +30,78 @@ class DashbordActivity : AppCompatActivity() {
      val addbtn = findViewById<Button>(R.id.add)
         val btn = findViewById<Button>(R.id.button4)
         val progress = findViewById<Button>(R.id.progress)
-        val exam = findViewById<Button>(R.id.progress)
+        val done = findViewById<Button>(R.id.done)
 
 
         val aboutus = findViewById<ImageView>(R.id.aboutus)
 
+        val name = intent.getStringExtra("name").toString()
+
+
+        // الكود الخاص بالقائمه الجانبيه (menu)
+        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val nav = findViewById<NavigationView>(R.id.nav)
+        val viewmenu = findViewById<ImageView>(R.id.viewmenu)
+
+
+
+        viewmenu.setOnClickListener {
+            drawer.openDrawer(GravityCompat.START)
+        }
+
+        nav.setNavigationItemSelectedListener { menuItem ->
+            // اتخاذ إجراءات استجابة للعنصر المحدد في NavigationView
+            when (menuItem.itemId) {
+                R.id.dashbord -> {
+                    val intent = Intent(this, DashbordActivity::class.java)
+                    intent.putExtra("name",name)
+                    startActivity(intent)
+
+                    true
+                }
+                R.id.exams -> {
+                    val intent = Intent(this, ExamActivity::class.java)
+                    intent.putExtra("name",name)
+                    startActivity(intent)
+                    true
+                }
+                R.id.Tasks -> {
+                    val intent = Intent(this, TaskActivity::class.java)
+                    intent.putExtra("name",name)
+                    startActivity(intent)
+                    true
+                }
+                R.id.leacher -> {
+                    val intent = Intent(this, LeacherActivity::class.java)
+                    intent.putExtra("name",name)
+                    startActivity(intent)
+                    true
+                }
+                R.id.profile -> {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    intent.putExtra("name",name)
+
+                    startActivity(intent)
+                    true
+                }
+                R.id.logout -> {
+                    finish()
+                    val intent = Intent(this, MainActivity::class.java)
+
+
+                    startActivity(intent)
+                    true
+                }
+
+                // اتخاذ إجراءات إضافية للعناصر الأخرى إذا لزم الأمر
+                else -> false
+            }
+        }
+
+        // end menu code
+
+
         val todaydate = findViewById<TextView>(R.id.todaydate)
-
-
-
-
-
-
 
 
         val welcome = findViewById<TextView>(R.id.welcome)
@@ -56,7 +120,7 @@ class DashbordActivity : AppCompatActivity() {
         taskArrayList = arrayListOf<Task>()
         val intent=intent
 
-        val name = intent.getStringExtra("name").toString()
+        val progressbtn = intent.getStringExtra("progress")
 
         getTaskData(name ,d)
 
@@ -79,7 +143,10 @@ class DashbordActivity : AppCompatActivity() {
             startActivity(intent)
         }
         progress.setOnClickListener {
-            val intent = Intent(this, progress::class.java)
+            val intent = Intent(this, Progress::class.java)
+            intent.putExtra("name" , name)
+
+            intent.putExtra("progress" , progressbtn)
             startActivity(intent)
         }
         aboutus.setOnClickListener {
@@ -88,6 +155,12 @@ class DashbordActivity : AppCompatActivity() {
 
             startActivity(intent)
 
+        }
+        done.setOnClickListener {
+            val intent = Intent(this, DoneActivity::class.java)
+            intent.putExtra("name" , name)
+
+            startActivity(intent)
         }
 
 

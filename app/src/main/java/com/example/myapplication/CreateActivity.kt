@@ -39,7 +39,7 @@ class CreateActivity : AppCompatActivity() {
             val database = Firebase.database
             val myRef = database.reference
 
-            myRef.child("users").push().setValue(user)
+            myRef.child("users").child(n.text.toString().trim()).setValue(user)
 
                 .addOnSuccessListener {
                     // Data sent successfully

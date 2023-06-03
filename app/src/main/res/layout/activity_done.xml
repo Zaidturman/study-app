@@ -13,20 +13,25 @@
 
         />
 
+
+
+
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tasklist1"
+        android:id="@+id/tasklist"
         android:layout_width="409dp"
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
         tools:listitem="@layout/task_item"
-         />
-
-
+        tools:ignore="MissingConstraints" />
 </ScrollView>
 </LinearLayout>

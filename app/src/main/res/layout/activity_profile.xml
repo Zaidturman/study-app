@@ -1,0 +1,81 @@
+<!-- activity_profile.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    android:id="@+id/activity_edit_profile">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/baseline_person_24"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="john.doe@example.com"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Add more profile information as needed -->
+
+    <Button
+        android:id="@+id/edit_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/social_media_icon1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/facebook"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/social_media_icon2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/instagram"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/social_media_icon3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/linkedin"
+            android:layout_marginEnd="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

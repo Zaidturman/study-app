@@ -18,7 +18,7 @@ class ExamActivity: AppCompatActivity() {
         setContentView(R.layout.activity_exam)
 
 
-        taskRecyclerView = findViewById(R.id.tasklist)
+        taskRecyclerView = findViewById(R.id.tasklist1)
         taskRecyclerView.layoutManager = LinearLayoutManager(this)
         taskRecyclerView.setHasFixedSize(true)
 

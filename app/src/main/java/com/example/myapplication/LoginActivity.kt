@@ -38,6 +38,8 @@ class LoginActivity : AppCompatActivity() {
         val loginbtn = findViewById<Button>(R.id.btnLogin)
         val createaccount = findViewById<TextView>(R.id.textView3)
 
+
+
         loginbtn.setOnClickListener {
 
 
@@ -73,6 +75,9 @@ class LoginActivity : AppCompatActivity() {
                             "please enter valid user name or create account ",
                             Toast.LENGTH_SHORT
                         ).show()
+                        username.text = null
+                        password.text =null
+
                     }
 
                     override fun onCancelled(error: DatabaseError) {
@@ -96,4 +101,5 @@ class LoginActivity : AppCompatActivity() {
 
     }
 }
+
 

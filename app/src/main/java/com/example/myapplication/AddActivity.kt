@@ -59,7 +59,7 @@ class AddActivity : AppCompatActivity() {
             var t = "$hour:$min"
 
             val selectedOption = spinner.selectedItem.toString()
-            val status = intent.getStringExtra("status").toString()
+            val status = true
 
 
             val task = Task(selectedOption,etTitle.text.toString().trim(),d,t,status)

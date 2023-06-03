@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="TextView"
+        android:text="About Us"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+
+
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="403dp"
-        android:layout_height="416dp"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:padding="2dp"
         android:text="تم تطوير تطبيق تنظيم المواعيد لتلبية احتياجات الأفراد الذين يسعون لتنظيم حياتهم اليومية والمهام والأحداث المهمة. يهدف التطبيق إلى توفير وسيلة سهلة وفعالة لتنظيم المواعيد والمهام المتنوعة مثل المهام اليومية، والامتحانات، والمحاضرات، والمواعيد الشخصية والمهنية الأخرى.
@@ -36,13 +36,13 @@
 بفضل تطبيقنا، يمكن للمستخدمين تحقيق العديد من الفوائد مثل تحسين إنتاجيتهم وتنظيم وقتهم بشكل أفضل، والحفاظ على المهام والأحداث الهامة في مكان واحد، وتقليل التوتر والنسيان بفضل التذكيرات الموثوقة. بفضل تطبيقنا، ستتمكن من إدارة حياتك بطريقة منظمة وفعالة.
 
 استمتع بتجربة تنظيم المواعيد المبتكرة مع تطبيقنا واستعد لإدارة حياتك بطريقة سهلة ومنظم"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-</ScrollView>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -62,7 +62,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:layout_constraintVertical_bias="0.903"
-        app:srcCompat="@drawable/colorslogowhithout" />
+        app:srcCompat="@drawable/whitelogo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

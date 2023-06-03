@@ -5,8 +5,10 @@ data class Task(
     var title: String? =null,
     var etdate: String? =null,
     var ettime: String? =null,
-    var status: String? = null
+    var status: Boolean? = null
 ) {
+
+
     // Empty constructor required by Firebase
-    constructor() : this("", "","","","")
+    constructor() : this("", "","","",true)
 }

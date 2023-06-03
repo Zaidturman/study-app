@@ -1,29 +1,32 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.Button
+import android.view.Menu
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.database.*
+import java.util.*
 
-
-class TasklistActivity : AppCompatActivity(){
+class DoneActivity : AppCompatActivity() {
 
     private lateinit var dbref : DatabaseReference
     private lateinit var taskRecyclerView: RecyclerView
     private lateinit var taskArrayList: ArrayList<Task>
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tasklist)
+        setContentView(R.layout.activity_done)
+
+        val calendar = Calendar.getInstance()
+
+        val year = calendar[Calendar.YEAR]
+        val month = calendar[Calendar.MONTH]+1
+        val day = calendar[Calendar.DAY_OF_MONTH]
+
+        var d = "$day/$month/$year"
 
 
         taskRecyclerView = findViewById(R.id.tasklist)
@@ -31,14 +34,11 @@ class TasklistActivity : AppCompatActivity(){
         taskRecyclerView.setHasFixedSize(true)
 
         taskArrayList = arrayListOf<Task>()
-
         val intent=intent
 
         val name = intent.getStringExtra("name").toString()
-        getTaskData(name)
 
-        println(name)
-
+        getTaskData(name ,d)
 
 
 
@@ -49,31 +49,35 @@ class TasklistActivity : AppCompatActivity(){
 
 
     }
-
-    private fun getTaskData(n:String){
+    private fun getTaskData(n:String , d:String) {
 
         dbref = FirebaseDatabase.getInstance().getReference("tasks").child(n)
 
-        dbref.addValueEventListener(object : ValueEventListener{
+        dbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
-                if(snapshot.exists()){
-                    for(taskSnapshot in snapshot.children){
+                if (snapshot.exists()) {
+                    for (taskSnapshot in snapshot.children) {
 
                         val task = taskSnapshot.getValue(Task::class.java)
+                        if (d.trim() > task?.etdate.toString().trim()) {
 
-                        taskArrayList.add(task!!)
+                            taskArrayList.add(task!!)
+                        }
 
                     }
                     taskRecyclerView.adapter = MyAdapter(taskArrayList)
+
                 }
+
             }
+
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
+
         })
     }
-
 
 
 }

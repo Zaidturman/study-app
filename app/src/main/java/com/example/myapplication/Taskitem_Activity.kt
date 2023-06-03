@@ -30,12 +30,27 @@ class Taskitem_Activity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.task_item)
 
-        val card = findViewById<CardView>(R.id.card1)
+        val progressbtn = findViewById<CheckBox>(R.id.progressbtn)
 
-        card.setOnClickListener {
-            val intent = Intent(this, card_details::class.java)
-            startActivity(intent)
-        }
+        val intent=intent
+        val name = intent.getStringExtra("name").toString()
+
+
+
+        if(progressbtn.isChecked){
+           val database = Firebase.database
+           val myRef = database.reference
+
+           myRef.child("tasks").child(name).child("status").push().setValue(true)
+               .addOnSuccessListener {
+                   // Data sent successfully
+                   Toast.makeText(this, "Data sent ", Toast.LENGTH_SHORT).show()
+               }
+               .addOnFailureListener {
+                   // Failed to send data
+                   Toast.makeText(this, "Failed to send data ", Toast.LENGTH_SHORT).show()
+               }
+       }
 
     }
 }

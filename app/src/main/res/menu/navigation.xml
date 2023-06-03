@@ -22,13 +22,7 @@
 
                 >
             </item>
-            <item android:id="@+id/calender"
-                android:title="calender"
-                android:icon="@drawable/baseline_calendar_today_24"
 
-
-                >
-            </item>
             <item android:id="@+id/Tasks"
                 android:title="Tasks"
                 android:icon="@drawable/baseline_task_alt_24"
@@ -50,13 +44,14 @@
 
                 >
             </item>
-            <item android:id="@+id/setting"
-                android:title="setting"
-                android:icon="@drawable/baseline_settings_24"
+            <item android:id="@+id/logout"
+                android:title="Logout"
+                android:icon="@drawable/baseline_logout_24"
 
 
                 >
             </item>
+
         </menu>
     </item>
 
